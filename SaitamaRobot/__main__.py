@@ -51,7 +51,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello {},My Name is Itsuki Torakata
+Hello {},My Name is Itsuki Torataka
 𝕀'𝕞 𝔸 𝕄𝕖𝕞𝕓𝕖𝕣 𝕆𝕗 ℙ𝕦𝕓𝕝𝕚𝕔 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 𝔹𝕦𝕣𝕖𝕒𝕦.
 I will help you manage your group
 if anyone breaks the rules I'll shoot!
@@ -60,7 +60,7 @@ To find out what commands I type /help Or !help.
 """
 
 HELP_STRINGS = """
-Hey there! My name is Itsuki torakata 
+Hey there! My name is Itsuki torataka 
 𝕀'𝕞 𝔸 𝕄𝕖𝕞𝕓𝕖𝕣 𝕆𝕗 ℙ𝕦𝕓𝕝𝕚𝕔 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 𝔹𝕦𝕣𝕖𝕒𝕦. ,I will help you manage your groups! Have a look at the following for an idea of some of \
 the things I can help you with.
 
@@ -79,7 +79,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/32592810a07b894b59aca.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/d4deacf31d230ec04b6cb.jpg"
 
 DONATE_STRING = """donate to the original writer of the Base code, Paul
 There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
@@ -189,12 +189,13 @@ def start(update: Update, context: CallbackContext):
                               text="🍁Support Group🍁",
                               url=f"https://t.me/itsukihelp"),
                               InlineKeyboardButton(
-                              text="🎧Takahashi Ch🎧",
-                              url="https://t.me/IGRISROBOT_SUPPORT")
-                          ]])) 
+                              text="🎧My Channel🎧",
+                              url="https://t.me/Takahashihelp")
+                          ]])) text="🐻owner🐻",
+                              url="https://t.me/coiju")
     else:
         update.effective_message.reply_text(
-            "Need what help? Or do you want me to shoot your heart?".format(uptime),
+            "Yo, I'm shooting".format(uptime),
             parse_mode=ParseMode.HTML)
 
 
@@ -292,7 +293,7 @@ def get_help(update: Update, context: CallbackContext):
     if chat.type != chat.PRIVATE:
 
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Contact me in PM.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
                     text="Help",
